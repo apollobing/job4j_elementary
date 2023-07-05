@@ -9,11 +9,11 @@ public class SimpleStringEncoder {
             if (symbol == input.charAt(i)) {
                 counter++;
             } else {
-                result += counter == 1 ? "" + input.charAt(i - 1) : "" + input.charAt(i - 1) + counter;
+                result += "" + input.charAt(i - 1) + (counter == 1 ? "" : counter);
                 symbol = input.charAt(i);
                 counter = 1;
             }
         }
-        return counter == 1 ? result + input.charAt(input.length() - 1) : result + input.charAt(input.length() - 1) + counter;
+        return result + input.charAt(input.length() - 1) + (counter == 1 ?  "" : counter);
     }
 }
