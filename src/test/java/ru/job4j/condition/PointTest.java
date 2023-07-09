@@ -7,34 +7,28 @@ public class PointTest {
 
     @Test
     public void when00To20Then2() {
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
+        Point a = new Point(0, 0);
+        Point b = new Point(0, 2);
         double expected = 2;
-        double out = Point.distance(x1, y1, x2, y2);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
 
     @Test
     public void when13To58Then6dot40() {
-        int x1 = 1;
-        int y1 = 3;
-        int x2 = 5;
-        int y2 = 8;
+        Point a = new Point(1, 3);
+        Point b = new Point(5, 8);
         double expected = 6.40;
-        double out = Point.distance(x1, y1, x2, y2);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
 
     @Test
     public void when42To69Then7dot28() {
-        int x1 = 4;
-        int y1 = 2;
-        int x2 = 6;
-        int y2 = 9;
+        Point a = new Point(4, 2);
+        Point b = new Point(6, 9);
         double expected = 7.28;
-        double out = Point.distance(x1, y1, x2, y2);
+        double out = a.distance(b);
         Assert.assertEquals(expected, out, 0.01);
     }
 }
